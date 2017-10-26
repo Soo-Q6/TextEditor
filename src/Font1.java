@@ -19,20 +19,20 @@ class Font1 extends JDialog implements ItemListener {
     String name = new String("宋体");
     Font f1 = new Font("隶书", Font.PLAIN, 15);
     int style = 1;
-    int size = 12;
+    int size = 15;
     String[] array2 = new String[]{"常       规", "倾        斜", "加       粗"};
     String[] array3 = new String[]{"14", "15", "15", "16", "17", "18"};
     GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
     String[] fontName = ge.getAvailableFontFamilyNames();
     JButton b1 = new JButton("确定");
     JButton b2 = new JButton("颜色");
-    JTextPane a1 = new JTextPane();
+    JTextPane jTextPane = new JTextPane();
 
     void set(JTextPane n) {
-        a1 = n;
+        jTextPane = n;
     }
 
-    public Font1() {
+    Font1() {
         setTitle("字体");
         setSize(500, 600);
         setLayout(new FlowLayout());
@@ -102,10 +102,11 @@ class Font1 extends JDialog implements ItemListener {
 
     }
 
+    //hsq
     class MyActionListener3 implements ActionListener {
         public void actionPerformed(ActionEvent e2) {
-            Font f = new Font(name, style, size);
-            a1.setFont(f);
+            Font font = new Font(name, style, size);
+            jTextPane.setFont(font);
             if (e2.getActionCommand() == "颜色") {
                 setcolor();
             }
@@ -113,7 +114,7 @@ class Font1 extends JDialog implements ItemListener {
     }
 
     void setcolor() {
-        Color fontcolor = JColorChooser.showDialog(this, "字体颜色选择", a1.getForeground());
-        a1.setForeground(fontcolor);
+        Color fontcolor = JColorChooser.showDialog(this, "字体颜色选择", jTextPane.getForeground());
+        jTextPane.setForeground(fontcolor);
     }
 }

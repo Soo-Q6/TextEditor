@@ -13,8 +13,8 @@ class Change extends JDialog {
     JTextField t2 = new JTextField(10);
     JButton b2 = new JButton("全部替换");
     JButton b3 = new JButton("取消");
-    JTextPane a1 = new JTextPane();
     Font f1 = new Font("隶书", Font.PLAIN, 15);
+    JTextPane a1 = new JTextPane();
 
     //int m;
     void set(JTextPane n) {

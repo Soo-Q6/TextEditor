@@ -12,6 +12,14 @@ class Search extends JDialog {
     JButton b1 = new JButton("查找下一个");
     JButton b2 = new JButton("取消");
     Font f1 = new Font("隶书", Font.PLAIN, 15);
+    JTextPane jTextPane = new JTextPane();
+    int cnt = 0;
+    int offset = 0;
+
+    //int m;
+    void set(JTextPane n) {
+        jTextPane = n;
+    }
 
     public Search() {
         setTitle("查找");
@@ -25,12 +33,27 @@ class Search extends JDialog {
         add(b1);
         add(b2);
         b2.addActionListener(new MyActionListener2());
+        b1.addActionListener(new ActionListener() {
+            //hsq
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String str = jTextPane.getText();
+                String des = t1.getText();
+                System.out.println(offset);
+                if((offset = str.indexOf(des, offset)) != -1){
+//                    jTextPane.setSelectionStart(offset);
+//                    jTextPane.setSelectionEnd(offset+des.length()-1);
+//                    jTextPane.setSelectionColor(Color.blue);
+                    offset = offset + des.length();
+                    cnt++;
+                }
+            }
+        });
     }
 
     class MyActionListener2 implements ActionListener {
         public void actionPerformed(ActionEvent e1) {
             setVisible(false);
         }
-
     }
 }

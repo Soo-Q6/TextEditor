@@ -2,8 +2,6 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.BadLocationException;
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
 import javax.swing.text.html.HTML;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
@@ -32,9 +30,9 @@ public class Wordwin extends JFrame implements DocumentListener {
     private String[] str2 = {"网络保存", "网络读取", "查找", "替换", "insert"};
     private String[] str3 = {"字体"};
     private Font f1 = new Font("隶书", Font.PLAIN, 15);
-    private Search d1 = new Search();
+    private Search search1 = new Search();
     private Font1 z1 = new Font1();
-    private  Change c1 = new Change();
+    private  Change change1 = new Change();
     String source = "";
     private boolean isNoChanged = true;
     private String nowFilePath = "";
@@ -61,10 +59,10 @@ public class Wordwin extends JFrame implements DocumentListener {
                     exit();
                 }
                 if (e.getActionCommand().equals("查找")) {
-                    d1.setVisible(true);
+                    search1.setVisible(true);
                 }
                 if (e.getActionCommand().equals("替换")) {
-                    c1.setVisible(true);
+                    change1.setVisible(true);
                 }
                 if (e.getActionCommand().equals("字体")) {
                     z1.setVisible(true);
@@ -109,7 +107,8 @@ public class Wordwin extends JFrame implements DocumentListener {
     }
 
     Wordwin() {
-        c1.set(wordPanel);
+        change1.set(wordPanel);
+        search1.set(wordPanel);
         z1.set(wordPanel);
         setTitle("文本编辑器");
         Toolkit kit = Toolkit.getDefaultToolkit();

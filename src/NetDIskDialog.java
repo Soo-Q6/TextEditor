@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
+//LZN
 public class NetDIskDialog extends JDialog {
     private Font font1 = new Font("隶书", Font.PLAIN, 15);
     private JButton button1 ;
