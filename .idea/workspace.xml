@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e803f03f-89da-480e-bae3-28ec34112d36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NetDIskDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Change.java" afterPath="$PROJECT_DIR$/src/Change.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Font1.java" afterPath="$PROJECT_DIR$/src/Font1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wordwin.java" afterPath="$PROJECT_DIR$/src/Wordwin.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,9 +20,12 @@
       <file leaf-file-name="Change.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Change.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="-736">
+              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+              <folding>
+                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#543#544#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,25 +43,24 @@
       <file leaf-file-name="Wordwin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Wordwin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="27">
+              <caret line="141" column="47" lean-forward="true" selection-start-line="141" selection-start-column="47" selection-end-line="141" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#2813:3119" expanded="false" />
-                <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-                <element signature="class#3415:3758" expanded="false" />
-                <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-                <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-                <element signature="e#5601#5787#0" expanded="true" />
-                <element signature="e#5786#5787#0" expanded="true" />
-                <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-                <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-                <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-                <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-                <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-                <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-                <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-                <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+                <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+                <element signature="e#5882#6068#0" expanded="true" />
+                <element signature="e#6067#6068#0" expanded="true" />
+                <element signature="e#6139#6140#0" expanded="true" />
+                <element signature="e#6174#6175#0" expanded="true" />
+                <element signature="e#6237#6238#0" expanded="true" />
+                <element signature="e#6272#6273#0" expanded="true" />
+                <element signature="e#6335#6336#0" expanded="true" />
+                <element signature="e#6370#6371#0" expanded="true" />
+                <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+                <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+                <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+                <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+                <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -93,12 +96,9 @@
       <file leaf-file-name="Font1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Font1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-              <folding>
-                <element signature="e#1080#1081#0" expanded="true" />
-                <element signature="e#1102#1103#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="184">
+              <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,12 +118,15 @@
       <find>flag</find>
       <find>isSaved</find>
       <find>f1</find>
+      <find>imgScrollPane</find>
+      <find>wordArea</find>
     </findStrings>
     <replaceStrings>
       <replace>e.getActionCommand().equals(</replace>
       <replace>isSaved</replace>
       <replace>isNoChanged</replace>
       <replace>font1</replace>
+      <replace>wordPanel</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -140,13 +143,13 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/change.java" />
         <option value="$PROJECT_DIR$/src/Change5.java" />
-        <option value="$PROJECT_DIR$/src/Change.java" />
         <option value="$PROJECT_DIR$/src/Search.java" />
-        <option value="$PROJECT_DIR$/src/Font1.java" />
         <option value="$PROJECT_DIR$/src/NetDIskWindow.java" />
         <option value="$PROJECT_DIR$/src/NetDIskDialog.java" />
-        <option value="$PROJECT_DIR$/src/Wordwin.java" />
         <option value="$PROJECT_DIR$/nullnull" />
+        <option value="$PROJECT_DIR$/src/Change.java" />
+        <option value="$PROJECT_DIR$/src/Font1.java" />
+        <option value="$PROJECT_DIR$/src/Wordwin.java" />
       </list>
     </option>
   </component>
@@ -352,12 +355,12 @@
       <workItem from="1508815996305" duration="607000" />
       <workItem from="1508900827515" duration="9893000" />
       <workItem from="1508980819124" duration="7838000" />
-      <workItem from="1508992340122" duration="6612000" />
+      <workItem from="1508992340122" duration="8218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28624000" />
+    <option name="totallyTimeSpent" value="30230000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,10 +470,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="e#1080#1081#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -480,21 +480,20 @@
           <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -503,7 +502,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -530,10 +532,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="e#1080#1081#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -543,21 +542,20 @@
           <caret line="183" column="9" lean-forward="true" selection-start-line="183" selection-start-column="9" selection-end-line="183" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -566,7 +564,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -584,21 +585,20 @@
           <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -607,10 +607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding>
-            <element signature="e#1080#1081#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -629,7 +626,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -647,21 +647,20 @@
           <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -681,10 +680,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding>
-            <element signature="e#1080#1081#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -692,7 +688,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -710,21 +709,20 @@
           <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -733,10 +731,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding>
-            <element signature="e#1080#1081#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -755,7 +750,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -765,21 +763,20 @@
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="46" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -796,7 +793,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -806,21 +806,20 @@
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="46" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -837,7 +836,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -855,21 +857,20 @@
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="46" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -878,7 +879,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -896,21 +900,20 @@
           <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -919,7 +922,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -937,21 +943,20 @@
           <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -960,7 +965,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -978,21 +986,20 @@
           <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1012,17 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Font1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="e#1080#1081#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/swing/text/JTextComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -1034,14 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Change.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Search.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -1050,6 +1038,33 @@
             <element signature="e#792#793#0" expanded="true" />
             <element signature="e#833#834#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nullnull">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Change.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-736">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Font1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,35 +1080,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nullnull">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Wordwin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="27">
+          <caret line="141" column="47" lean-forward="true" selection-start-line="141" selection-start-column="47" selection-end-line="141" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2813:3119" expanded="false" />
-            <element signature="method#actionPerformed#0;class#2813:3119" expanded="false" />
-            <element signature="class#3415:3758" expanded="false" />
-            <element signature="method#actionPerformed#0;class#3415:3758" expanded="false" />
-            <element signature="method#Wordwin#0;class#Wordwin#0" expanded="false" />
-            <element signature="e#5601#5787#0" expanded="true" />
-            <element signature="e#5786#5787#0" expanded="true" />
-            <element signature="method#open#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#save#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#saveAs#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#exit#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#insert#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#showFiles#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#connect#0;class#Wordwin#0" expanded="false" />
-            <element signature="method#main#0;class#Wordwin#0" expanded="false" />
+            <element signature="class#MyActionListener1#0;class#Wordwin#0" expanded="false" />
+            <element signature="e#5882#6068#0" expanded="true" />
+            <element signature="e#6067#6068#0" expanded="true" />
+            <element signature="e#6139#6140#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6272#6273#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6370#6371#0" expanded="true" />
+            <marker date="1509005309413" expanded="false" signature="9128:9421" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="11991:12974" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13022:13333" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13371:13517" ph="{...}" />
+            <marker date="1509005309413" expanded="false" signature="13562:13643" ph="{...}" />
           </folding>
         </state>
       </provider>

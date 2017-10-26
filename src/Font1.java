@@ -26,9 +26,9 @@ class Font1 extends JDialog implements ItemListener {
     String[] fontName = ge.getAvailableFontFamilyNames();
     JButton b1 = new JButton("确定");
     JButton b2 = new JButton("颜色");
-    JTextArea a1 = new JTextArea();
+    JTextPane a1 = new JTextPane();
 
-    void set(JTextArea n) {
+    void set(JTextPane n) {
         a1 = n;
     }
 

@@ -11,14 +11,13 @@ class Change extends JDialog {
     JLabel l2 = new JLabel("替换为");
     JTextField t1 = new JTextField(10);
     JTextField t2 = new JTextField(10);
-    JButton b1 = new JButton("替换");
     JButton b2 = new JButton("全部替换");
     JButton b3 = new JButton("取消");
-    JTextArea a1 = new JTextArea();
+    JTextPane a1 = new JTextPane();
     Font f1 = new Font("隶书", Font.PLAIN, 15);
 
     //int m;
-    void set(JTextArea n) {
+    void set(JTextPane n) {
         a1 = n;
     }
 
@@ -31,17 +30,14 @@ class Change extends JDialog {
         l2.setFont(f1);
         t1.setFont(f1);
         t2.setFont(f1);
-        b1.setFont(f1);
         b2.setFont(f1);
         b3.setFont(f1);
         add(l1);
         add(t1);
         add(l2);
         add(t2);
-        add(b1);
         add(b2);
         add(b3);
-        b1.addActionListener(new MyActionListener3());
         b2.addActionListener(new MyActionListener3());
         b3.addActionListener(new MyActionListener3());
     }

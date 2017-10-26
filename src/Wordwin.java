@@ -1,6 +1,9 @@
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
 import javax.swing.text.html.HTML;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
@@ -14,24 +17,24 @@ public class Wordwin extends JFrame implements DocumentListener {
      *
      */
     private static final long serialVersionUID = 1L;
-    JMenuBar menubar = new JMenuBar();
-    JMenu file = new JMenu("文件");
-    JMenu edit = new JMenu("编辑");
-    JMenu geshi = new JMenu("格式");
-    JTextArea wordArea = new JTextArea();
-    JTextPane wordPanel = new JTextPane();
-    HTMLEditorKit htmlEditorKit = new HTMLEditorKit();
-    HTMLDocument text_html = (HTMLDocument) htmlEditorKit.createDefaultDocument();
+    private JMenuBar menubar = new JMenuBar();
+    private JMenu file = new JMenu("文件");
+    private JMenu edit = new JMenu("编辑");
+    private JMenu geshi = new JMenu("格式");
+//    private JTextArea wordPanel = new JTextArea();
+    private JTextPane wordPanel = new JTextPane();
+    private HTMLEditorKit htmlEditorKit = new HTMLEditorKit();
+    private HTMLDocument text_html = (HTMLDocument) htmlEditorKit.createDefaultDocument();
 
-    JScrollPane imgScrollPane = new JScrollPane(wordArea);
-    JScrollPane imgScrollPane2 = new JScrollPane(wordPanel);
-    String[] str1 = {"新建", "打开", "保存", "另存为", "退出"};
-    String[] str2 = {"网络保存", "网络读取", "查找", "替换", "insert"};
-    String[] str3 = {"字体"};
-    Font f1 = new Font("隶书", Font.PLAIN, 15);
-    Search d1 = new Search();
-    Font1 z1 = new Font1();
-    Change c1 = new Change();
+//    private JScrollPane imgScrollPane = new JScrollPane(wordPanel);
+    private JScrollPane imgScrollPane2 = new JScrollPane(wordPanel);
+    private  String[] str1 = {"新建", "打开", "保存", "另存为", "退出"};
+    private String[] str2 = {"网络保存", "网络读取", "查找", "替换", "insert"};
+    private String[] str3 = {"字体"};
+    private Font f1 = new Font("隶书", Font.PLAIN, 15);
+    private Search d1 = new Search();
+    private Font1 z1 = new Font1();
+    private  Change c1 = new Change();
     String source = "";
     private boolean isNoChanged = true;
     private String nowFilePath = "";
@@ -69,7 +72,7 @@ public class Wordwin extends JFrame implements DocumentListener {
                 if (e.getActionCommand().equals("insert")) {
                     insert();
                     String txt = wordPanel.getText();
-                    wordArea.setText(txt);
+                    wordPanel.setText(txt);
                 }
                 if (e.getActionCommand().equals("网络保存")) {
                     connect();
@@ -89,7 +92,7 @@ public class Wordwin extends JFrame implements DocumentListener {
                 if (e.getActionCommand().equals("网络读取")) {
                     connect();
 
-                    netDIskDialog = new NetDIskDialog(false, new ActionListener() {
+                    netDIskDialog = new NetDIskDialog(true, new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             //读取文件
@@ -106,16 +109,16 @@ public class Wordwin extends JFrame implements DocumentListener {
     }
 
     Wordwin() {
-        c1.set(wordArea);
-        z1.set(wordArea);
+        c1.set(wordPanel);
+        z1.set(wordPanel);
         setTitle("文本编辑器");
         Toolkit kit = Toolkit.getDefaultToolkit();
         Dimension screenSize = kit.getScreenSize();//获取屏幕分辨率
         setSize(screenSize.width / 2, screenSize.height / 2);//大小
         setLocation(screenSize.width / 4, screenSize.height / 4);//位置
         Container container = getContentPane();
-        container.setLayout(new GridLayout(2, 1));
-        add(imgScrollPane);
+        container.setLayout(new GridLayout(1, 1));
+//        add(imgScrollPane);
         add(imgScrollPane2);
         setJMenuBar(menubar);
         file.setFont(f1);
@@ -128,7 +131,7 @@ public class Wordwin extends JFrame implements DocumentListener {
         wordPanel.setContentType("text/html");
         wordPanel.setDocument(text_html);
 
-        wordArea.getDocument().addDocumentListener(this);
+//        wordPanel.getDocument().addDocumentListener(this);
         wordPanel.getDocument().addDocumentListener(this);
         for (int i = 0; i < str1.length; i++) {
             JMenuItem item1 = new JMenuItem(str1[i]);
@@ -204,7 +207,7 @@ public class Wordwin extends JFrame implements DocumentListener {
                 }
             }
 
-            wordArea.setText(temp);
+            wordPanel.setText(temp);
         }
 
     }
@@ -234,14 +237,14 @@ public class Wordwin extends JFrame implements DocumentListener {
         BufferedWriter out = null;
         try {
             out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)));
-            out.write(wordArea.getText());
+            out.write(wordPanel.getText());
             isNoChanged = true;
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {
                 out.close();
-                source = wordArea.getText();
+                source = wordPanel.getText();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -250,17 +253,17 @@ public class Wordwin extends JFrame implements DocumentListener {
 
     private void newfile() {
         if (isNoChanged) {
-            wordArea.setText("");
+            wordPanel.setText("");
         } else {
             int m = JOptionPane.showConfirmDialog(this, "是否保存该文件");
             if (m == 0) {
                 save();
-                wordArea.setText("");
+                wordPanel.setText("");
             }
 
             if (m == 1) {
                 //System.exit(0);
-                wordArea.setText("");
+                wordPanel.setText("");
                 isNoChanged = false;
             }
         }
@@ -287,7 +290,7 @@ public class Wordwin extends JFrame implements DocumentListener {
             String path = filedialog.getDirectory();
             String url = filedialog.getFile();
             String html = "<img src=\"file:///" + path + url + "\">";
-            System.out.println(html);
+//            System.out.println(html);
             htmlEditorKit.insertHTML(text_html, wordPanel.getCaretPosition(), html, 0, 0, HTML.Tag.IMG);
         } catch (Exception e) {
             e.printStackTrace();
@@ -310,12 +313,25 @@ public class Wordwin extends JFrame implements DocumentListener {
 
                     newfile();
                     //接受文件
+                    String temp="";
                     byte[] buf = new byte[1024];
                     int len = 0;
                     while ((len = in.read(buf)) != -1)//接收文件
                     {
                         System.out.println(new String(buf, 0, len));
-                        wordArea.append(new String(buf, 0, len));
+//                        SimpleAttributeSet attrset = new SimpleAttributeSet();
+//                        StyleConstants.setFontSize(attrset,24);
+//                        try {
+//                            wordPanel.getDocument().insertString(wordPanel.getDocument().getLength(),new String(buf, 0, len),attrset);
+                            temp+=new String(buf, 0, len);
+//                        }catch (BadLocationException e){
+//                            e.printStackTrace();
+//                        }
+                    }
+                    try {
+                        htmlEditorKit.insertHTML(text_html, wordPanel.getCaretPosition(), temp, 0, 0, HTML.Tag.IMG);
+                    }catch (BadLocationException e){
+                        e.printStackTrace();
                     }
                     out.write("下载成功".getBytes());//发送成功
                     System.out.println("下载成功");
@@ -343,7 +359,7 @@ public class Wordwin extends JFrame implements DocumentListener {
 
                     Thread.sleep(50);
                     //发送文件
-                    String text=wordArea.getText();
+                    String text=wordPanel.getText();
                     out.write(text.getBytes());
                     socket.shutdownOutput();
 
