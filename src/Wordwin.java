@@ -7,6 +7,7 @@ import javax.swing.text.html.HTMLEditorKit;
 import java.awt.*;
 import java.io.*;
 import java.awt.event.*;
+import java.net.Socket;
 
 public class Wordwin extends JFrame implements DocumentListener {
     /**
@@ -35,6 +36,9 @@ public class Wordwin extends JFrame implements DocumentListener {
     private boolean isNoChanged = true;
     private String nowFilePath = "";
     private boolean isSaved = false;
+    private NetDIskDialog netDIskDialog;
+    private Socket s;
+
     class MyActionListener1 implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() instanceof JMenuItem) {
@@ -68,10 +72,34 @@ public class Wordwin extends JFrame implements DocumentListener {
                     wordArea.setText(txt);
                 }
                 if (e.getActionCommand().equals("网络保存")) {
-                    wordArea.cut();
+                    connect();
+
+                    netDIskDialog = new NetDIskDialog(false, new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            saveOnNet(s, netDIskDialog.getTextFieldText());
+                            netDIskDialog.setVisible(false);
+                        }
+                    });
+
+                    netDIskDialog.setVisible(true);
+                    //建立连接，显示目录
+                    showFiles(s);
                 }
                 if (e.getActionCommand().equals("网络读取")) {
-                    wordArea.copy();
+                    connect();
+
+                    netDIskDialog = new NetDIskDialog(false, new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            //读取文件
+                            readFromNet(s, netDIskDialog.getTextFieldText());
+                            netDIskDialog.setVisible(false);
+                        }
+                    });
+                    netDIskDialog.setVisible(true);
+                    //建立连接，显示目录
+                    showFiles(s);
                 }
             }
         }
@@ -265,6 +293,90 @@ public class Wordwin extends JFrame implements DocumentListener {
             e.printStackTrace();
         }
 
+    }
+
+    //LZN
+    private void readFromNet(Socket socket, String fileName) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    InputStream in = socket.getInputStream();
+                    OutputStream out = socket.getOutputStream();
+                    System.out.println("获取流对象");
+                    //选择文件
+                    out.write("rece".getBytes());//发送命令
+                    out.write(fileName.getBytes());//发送文件名
+
+                    newfile();
+                    //接受文件
+                    byte[] buf = new byte[1024];
+                    int len = 0;
+                    while ((len = in.read(buf)) != -1)//接收文件
+                    {
+                        System.out.println(new String(buf, 0, len));
+                        wordArea.append(new String(buf, 0, len));
+                    }
+                    out.write("下载成功".getBytes());//发送成功
+                    System.out.println("下载成功");
+                    //展示文件
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
+    //LZN
+    private void saveOnNet(Socket socket,String fileName){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    InputStream in = socket.getInputStream();
+                    OutputStream out = socket.getOutputStream();
+                    System.out.println("获取流对象");
+                    //选择文件
+                    out.write("send".getBytes());//发送命令
+                    out.write(fileName.getBytes());//发送文件名
+
+                    Thread.sleep(50);
+                    //发送文件
+                    String text=wordArea.getText();
+                    out.write(text.getBytes());
+                    socket.shutdownOutput();
+
+                    byte[] bufIn = new byte[1024];
+                    int num = in.read(bufIn);
+                    System.out.println(new String(bufIn, 0, num));
+                    socket.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
+    //LZN
+    private void showFiles(Socket s){
+        try {
+            InputStream in = s.getInputStream();
+            byte[] bufIn = new byte[1024];
+            int num = in.read(bufIn);
+            netDIskDialog.sertTextAreaText((new String(bufIn, 0, num)));//显示文件目录
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    //LZN
+    private void connect(){
+        try {
+            s = new Socket("127.0.0.1", 10003);
+        }catch (IOException e1){
+            e1.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
