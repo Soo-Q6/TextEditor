@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -7,26 +9,12 @@ class Font1 extends JDialog implements ItemListener {
      *
      */
     private static final long serialVersionUID = 1L;
-    JPanel panel1 = new JPanel();
-    JPanel panel2 = new JPanel();
-    JPanel panel3 = new JPanel();
-    JComboBox comboBox1 = new JComboBox();
-    JComboBox comboBox2 = new JComboBox();
-    JComboBox comboBox3 = new JComboBox();
-    JLabel lab1 = new JLabel("字体：");
-    JLabel lab2 = new JLabel("字形：");
-    JLabel lab3 = new JLabel("字号：");
-    String name = new String("宋体");
-    Font f1 = new Font("隶书", Font.PLAIN, 15);
-    int style = 1;
-    int size = 15;
-    String[] array2 = new String[]{"常       规", "倾        斜", "加       粗"};
-    String[] array3 = new String[]{"14", "15", "15", "16", "17", "18"};
-    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-    String[] fontName = ge.getAvailableFontFamilyNames();
-    JButton b1 = new JButton("确定");
-    JButton b2 = new JButton("颜色");
-    JTextPane jTextPane = new JTextPane();
+    private JComboBox<String> fontFamilyComboBox = new JComboBox<>();
+    private JComboBox<String> fontComboBox = new JComboBox<>();
+    private JComboBox<String> fontSizeComboBox = new JComboBox<>();
+    //    int style = 1;
+    private SimpleAttributeSet attr=new SimpleAttributeSet();
+    private JTextPane jTextPane = new JTextPane();
 
     void set(JTextPane n) {
         jTextPane = n;
@@ -37,67 +25,92 @@ class Font1 extends JDialog implements ItemListener {
         setSize(500, 600);
         setLayout(new FlowLayout());
         //panel1.setLocation(100, 200);
-        lab1.setFont(f1);
-        lab2.setFont(f1);
-        comboBox1.setModel(new DefaultComboBoxModel(fontName));
-        comboBox1.setFont(f1);
+        JLabel fontFamilyLabel = new JLabel("字体：");
+        Font f1 = new Font("隶书", Font.PLAIN, 15);
+        fontFamilyLabel.setFont(f1);
+        JLabel fontLabel = new JLabel("字形：");
+        fontLabel.setFont(f1);
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        String[] fontName = ge.getAvailableFontFamilyNames();
+        fontFamilyComboBox.setModel(new DefaultComboBoxModel<>(fontName));
+
+        fontFamilyComboBox.setFont(f1);
         for (int i = 1; i < fontName.length; i++) {
-            //comboBox1.setSelectedIndex(i);
-            comboBox1.setSelectedItem(fontName);
-            //comboBox1.addItem(fontName);
+            //fontFamilyComboBox.setSelectedIndex(i);
+            fontFamilyComboBox.setSelectedItem(fontName);
+            //fontFamilyComboBox.addItem(fontName);
         }
-        comboBox2.setModel(new DefaultComboBoxModel(array2));
-        comboBox2.setFont(f1);
-        for (int i = 1; i < array2.length; i++) {
-            //comboBox2.setSelectedIndex(i);
-            comboBox2.setSelectedItem(array2);
-            //comboBox2.addItem(array2);
+        String[] font = new String[]{"常规", "倾斜", "加粗"};
+        fontComboBox.setModel(new DefaultComboBoxModel<>(font));
+        fontComboBox.setFont(f1);
+        for (int i = 1; i < font.length; i++) {
+            //fontComboBox.setSelectedIndex(i);
+            fontComboBox.setSelectedItem(font);
+            //fontComboBox.addItem(array2);
         }
-        comboBox3.setModel(new DefaultComboBoxModel(array3));
-        comboBox3.setFont(f1);
-        for (int i = 1; i < array3.length; i++) {
-            //comboBox2.setSelectedIndex(i);
-            comboBox2.setSelectedItem(array3);
-            //comboBox3.addItem(array3);
+        String[] fontSize = new String[]{"14", "15", "15", "16", "17", "18"};
+        fontSizeComboBox.setModel(new DefaultComboBoxModel<>(fontSize));
+        fontSizeComboBox.setFont(f1);
+        for (int i = 1; i < fontSize.length; i++) {
+            //fontComboBox.setSelectedIndex(i);
+            fontComboBox.setSelectedItem(fontSize);
+            //fontSizeComboBox.addItem(fontSize);
         }
 
-        panel1.add(lab1);
-        panel1.add(comboBox1);
-        panel2.add(lab2);
-        panel2.add(comboBox2);
-        panel3.add(lab3);
-        panel3.add(comboBox3);
-        panel3.add(b1);
-        panel3.add(b2);
-        b2.addActionListener(new MyActionListener3());
-        comboBox1.addItemListener(this);
-        comboBox2.addItemListener(this);
-        comboBox3.addItemListener(this);
-        b1.addActionListener(new MyActionListener3());
+        JPanel panel1 = new JPanel();
+        panel1.add(fontFamilyLabel);
+        panel1.add(fontFamilyComboBox);
+        fontFamilyComboBox.addItemListener(this);
+
+        JPanel panel2 = new JPanel();
+        panel2.add(fontLabel);
+        panel2.add(fontComboBox);
+        fontComboBox.addItemListener(this);
+
+        JPanel panel3 = new JPanel();
+        JLabel fontSizeLabel = new JLabel("字号：");
+        panel3.add(fontSizeLabel);
+        panel3.add(fontSizeComboBox);
+        fontSizeComboBox.addItemListener(this);
+
+        JButton OKButton = new JButton("确定");
+        panel3.add(OKButton);
+
+        JButton colorButton = new JButton("颜色");
+        panel3.add(colorButton);
+        colorButton.addActionListener(new MyActionListener3());
+
+        OKButton.addActionListener(new MyActionListener3());
         add(panel1);
         add(panel2);
         add(panel3);
     }
 
     public void itemStateChanged(ItemEvent e) {
-        if (e.getSource() == comboBox1) {
-            name = comboBox1.getSelectedItem().toString();
+        if (e.getSource() == fontFamilyComboBox) {
+            String fam = fontFamilyComboBox.getSelectedItem().toString();
+            StyleConstants.setFontFamily(attr,fam);
         }
-        if (e.getSource() == comboBox2) {
-            String s1 = comboBox2.getSelectedItem().toString();
+        if (e.getSource() == fontComboBox) {
+            String s1 = fontComboBox.getSelectedItem().toString();
             if (s1.equals("加粗")) {
-                style = Font.BOLD;
+//                style = Font.BOLD;
+                StyleConstants.setBold(attr,true);
             }
             if (s1.equals("倾斜")) {
-                style = Font.ITALIC;
+//                style = Font.ITALIC;
+                StyleConstants.setItalic(attr,true);
             }
             if (s1.equals("常规")) {
-                style = Font.PLAIN;
+//                style = Font.PLAIN;
+                StyleConstants.setBold(attr,false);
+                StyleConstants.setItalic(attr,false);
             }
         }
-        if (e.getSource() == comboBox3) {
-            String s2 = comboBox3.getSelectedItem().toString();
-            size = Integer.parseInt(s2);
+        if (e.getSource() == fontSizeComboBox) {
+            String s2 = fontSizeComboBox.getSelectedItem().toString();
+            int size = Integer.parseInt(s2);
+            StyleConstants.setFontSize(attr,size);
         }
 
     }
@@ -105,16 +118,20 @@ class Font1 extends JDialog implements ItemListener {
     //hsq
     class MyActionListener3 implements ActionListener {
         public void actionPerformed(ActionEvent e2) {
-            Font font = new Font(name, style, size);
-            jTextPane.setFont(font);
-            if (e2.getActionCommand() == "颜色") {
-                setcolor();
+//            Font font = new Font(name, style, size);
+//            jTextPane.setFont(font);
+            if (e2.getActionCommand().equals("颜色")) {
+                setColor();
             }
+            jTextPane.setParagraphAttributes(attr,false);
         }
     }
 
-    void setcolor() {
-        Color fontcolor = JColorChooser.showDialog(this, "字体颜色选择", jTextPane.getForeground());
-        jTextPane.setForeground(fontcolor);
+    private void setColor() {
+        Color fontColor = JColorChooser.showDialog(this, "字体颜色选择", jTextPane.getForeground());
+        //jTextPane.setForeground(fontcolor);
+        //SimpleAttributeSet attr=new SimpleAttributeSet();
+        StyleConstants.setForeground(attr,fontColor);
+        //jTextPane.setParagraphAttributes(attr,false);
     }
 }
