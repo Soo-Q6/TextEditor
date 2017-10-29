@@ -4,7 +4,7 @@ import javax.swing.text.StyleConstants;
 import java.awt.*;
 import java.awt.event.*;
 
-class Font1 extends JDialog implements ItemListener {
+class FontDialog extends JDialog implements ItemListener {
     /**
      *
      */
@@ -20,7 +20,7 @@ class Font1 extends JDialog implements ItemListener {
         jTextPane = n;
     }
 
-    Font1() {
+    FontDialog() {
         setTitle("字体");
         setSize(500, 600);
         setLayout(new FlowLayout());

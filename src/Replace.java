@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-class Change extends JDialog {
+class Replace extends JDialog {
     /**
      *
      */
@@ -16,7 +16,7 @@ class Change extends JDialog {
         a1 = n;
     }
 
-    Change() {
+    Replace() {
         setTitle("替换");
         setSize(500, 300);
         setLocation(200, 300);

@@ -10,7 +10,7 @@ import java.io.*;
 import java.awt.event.*;
 import java.net.Socket;
 
-public class Wordwin extends JFrame implements DocumentListener {
+public class WordWindow extends JFrame implements DocumentListener {
     /**
      *
      */
@@ -31,8 +31,8 @@ public class Wordwin extends JFrame implements DocumentListener {
     private String[] str3 = {"字体"};
     private Font f1 = new Font("隶书", Font.PLAIN, 15);
     private Search search1 = new Search();
-    private Font1 z1 = new Font1();
-    private  Change change1 = new Change();
+    private FontDialog z1 = new FontDialog();
+    private Replace replace1 = new Replace();
     String source = "";
     private boolean isNoChanged = true;
     private String nowFilePath = "";
@@ -62,7 +62,7 @@ public class Wordwin extends JFrame implements DocumentListener {
                     search1.setVisible(true);
                 }
                 if (e.getActionCommand().equals("替换")) {
-                    change1.setVisible(true);
+                    replace1.setVisible(true);
                 }
                 if (e.getActionCommand().equals("字体")) {
                     z1.setVisible(true);
@@ -106,8 +106,8 @@ public class Wordwin extends JFrame implements DocumentListener {
         }
     }
 
-    Wordwin() {
-        change1.set(wordPanel);
+    WordWindow() {
+        replace1.set(wordPanel);
         search1.set(wordPanel);
         z1.set(wordPanel);
         setTitle("文本编辑器");
@@ -395,7 +395,7 @@ public class Wordwin extends JFrame implements DocumentListener {
     }
 
     public static void main(String[] args) {
-        JFrame wordwin = new Wordwin();
+        JFrame wordwin = new WordWindow();
         wordwin.setVisible(true);
     }
 }
