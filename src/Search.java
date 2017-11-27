@@ -1,8 +1,5 @@
 import javax.swing.*;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Document;
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
+import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -73,13 +70,25 @@ class Search extends JDialog {
             String des = t1.getText();                  //get searching contains from ...
             //jTextPane.getDocument().
             //System.out.println(offset);
+            System.out.println(des);
             if((offset = str.indexOf(des, offset)) != -1){     //
                 try {
-                    jTextPane.getDocument().remove(0,length);
-                    jTextPane.getDocument().insertString(0,str,null);
-                    jTextPane.getDocument().remove(offset,des.length());
-                    jTextPane.getDocument().insertString(offset,des,attr);
-                } catch (BadLocationException e1) {
+                    int counter2=1;
+                    DefaultHighlighter.DefaultHighlightPainter highlightPainter =
+                            new DefaultHighlighter.DefaultHighlightPainter(Color.GRAY);
+                    jTextPane.getHighlighter().addHighlight(offset, offset+des.length(),
+                            highlightPainter);
+                    String replacer="¥";
+//                    jTextPane.getDocument().remove(0,length);
+//                    jTextPane.getDocument().insertString(0,str,null);
+//                    jTextPane.getDocument().remove(offset,des.length());
+//                    jTextPane.getDocument().insertString(offset,des,attr);
+                    while(counter2!=des.length()){
+                        replacer = replacer + "¥";
+                        counter2 = counter2 + 1;
+                    }
+                    str=str.replaceFirst(des,replacer);
+                } catch (Exception e1) {
                     e1.printStackTrace();
                 }
 //                    jTextPane.setSelectionStart(offset);
